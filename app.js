@@ -249,7 +249,7 @@ app.post('/process', function (req, res) {
     for (var i=1 ;i <=count; i++){
         if(username == db.getData('/user'+i+"/name")){
             for (var j =1 ,k =1; j <=10 ; j++){
-                console.log(db.getData('/user'+i+'/andhra/item'+j));
+                //console.log(db.getData('/user'+i+'/andhra/item'+j));
                 if(db.getData('/user'+i+'/andhra/item'+j) > 0){
                     predb.push('/user'+i+'/andhra/'+ k +'/itemname',"item"+j);
                     predb.push('/user'+i+'/andhra/'+ k++ +'/rating', db.getData('/user'+i+'/andhra/item'+j) );
@@ -257,7 +257,7 @@ app.post('/process', function (req, res) {
             }
 
             for (var j =1 ,k =1; j <=10 ; j++){
-                console.log(db.getData('/user'+i+'/andhra/item'+j));
+                //console.log(db.getData('/user'+i+'/andhra/item'+j));
                 if(db.getData('/user'+i+'/tamilnadu/item'+j) > 0){
                     predb.push('/user'+i+'/tamilnadu/'+ k +'/itemname',"item"+j);
                     predb.push('/user'+i+'/tamilnadu/'+ k++ +'/rating', db.getData('/user'+i+'/tamilnadu/item'+j) );
@@ -268,12 +268,15 @@ app.post('/process', function (req, res) {
 
     //find similarties
 
+    var psum = 0;
+    var sim_item1 = [], l1 = 0 , sum1= 0 , sumsq1 =0 ;
+    var sim_item2 = [], l2 = 0 , sum2 =0 , sumsq2 =0 ;
+    var user_name , m =1;
+    var similarity =0 ;
     console.log(username);
     for(var j = 1 ; j <= count ; j++) {
         if (username != db.getData('/user' + j + '/name')) {
-            var psum = 0;
-            var sim_item1 = [], l1 = 0 , sum1= 0 , sumsq1 =0 ;
-            var sim_item2 = [], l2 = 0 , sum2 =0 , sumsq2 =0 ;
+            user_name = db.getData('/user' + j + '/name');
             for (var m = 1; m <= predb.getData('/user' + id + '/andhra/no'); m++) {
                 var item = predb.getData("/user" + id + "/andhra/" + m + "/itemname");
                 console.log(item);
@@ -286,10 +289,10 @@ app.post('/process', function (req, res) {
                     if (item == predb.getData('/user' + j + '/andhra/' + k + '/itemname')) {
                         sim_item1[l1++] = item;
                         psum = psum + (parseInt(predb.getData('/user' + j + '/andhra/' + k + '/rating')) * parseInt(predb.getData('/user' + id + '/andhra/' + m + '/rating')));
-                        sum1 = sum1 + parseInt(predb.getData('/user' + j + '/andhra/' + k + '/rating')) ;
-                        sum2 = sum2 + parseInt(predb.getData('/user' + id + '/andhra/' + m + '/rating')) ;
-                        sumsq1 = sumsq1 + Math.pow( parseInt(predb.getData('/user' + j + '/andhra/' + k + '/rating')),2);
-                        sumsq2 = sumsq2 + Math.pow( parseInt(predb.getData('/user' + id + '/andhra/' + m + '/rating')),2) ;
+                        sum2 = sum2 + parseInt(predb.getData('/user' + j + '/andhra/' + k + '/rating')) ;
+                        sum1 = sum1 + parseInt(predb.getData('/user' + id + '/andhra/' + m + '/rating')) ;
+                        sumsq2 = sumsq2 + Math.pow( parseInt(predb.getData('/user' + j + '/andhra/' + k + '/rating')),2);
+                        sumsq1 = sumsq1 + Math.pow( parseInt(predb.getData('/user' + id + '/andhra/' + m + '/rating')),2) ;
                     }
                 }
                 console.log(sim_item1);
@@ -307,26 +310,29 @@ app.post('/process', function (req, res) {
                     if (item == predb.getData('/user' + j + '/tamilnadu/' + k + '/itemname')) {
                         sim_item2[l2++] = item;
                         psum = psum + (parseInt(predb.getData('/user' + j + '/tamilnadu/' + k + '/rating'))*parseInt(predb.getData('/user' + id + '/tamilnadu/' + i + '/rating')));
-                        sum1 = sum1 + parseInt(predb.getData('/user' + j + '/tamilnadu/' + k + '/rating')) ;
-                        sum2 = sum2 + parseInt(predb.getData('/user' + id + '/tamilnadu/' + i + '/rating')) ;
-                        sumsq1 = sumsq1 + Math.pow(parseInt(predb.getData('/user' + j + '/tamilnadu/' + k + '/rating')),2) ;
-                        sumsq2 = sumsq2 + Math.pow(parseInt(predb.getData('/user' + id + '/tamilnadu/' + i + '/rating')),2) ;
+                        sum2 = sum2 + parseInt(predb.getData('/user' + j + '/tamilnadu/' + k + '/rating')) ;
+                        sum1 = sum1 + parseInt(predb.getData('/user' + id + '/tamilnadu/' + i + '/rating')) ;
+                        sumsq2 = sumsq2 + Math.pow(parseInt(predb.getData('/user' + j + '/tamilnadu/' + k + '/rating')),2) ;
+                        sumsq1 = sumsq1 + Math.pow(parseInt(predb.getData('/user' + id + '/tamilnadu/' + i + '/rating')),2) ;
                     }
                 }
                 console.log(sim_item2);
             }
-            /*console.log("the psum is "+ psum);
-            console.log("the sum1 is "+ sum1);
-            console.log("the sum2 is "+ sum2);
+
+
             console.log("the sumsq1 is "+ sumsq1);
-            console.log("the sumsq2 is "+ sumsq2);*/
+            console.log("the sumsq2 is "+ sumsq2);
             var n = (l1+l2);
-            var similarity =0 ;
+
             if(n>0) {
+                var  num =0, den =0 ;
                 console.log("l1 ="+(l1) + " l2 = "+(l2));
-                var num = (psum - (sum2 + sum1) / (l1 + l2 ));
+                console.log("the sum1 is "+ sum1);
+                console.log("the sum2 is "+ sum2);
+                console.log("the psum is "+ psum);
+                num = psum - (sum1*sum2)/n;
                 console.log("num ="+num);
-                var den=Math.sqrt((sumsq1-Math.pow(sum1,2)/ (l1 + l2) )*( sumsq2-Math.pow(sum2,2)/(l1 + l2)));
+                den=Math.sqrt((sumsq1-Math.pow(sum1,2)/ n )*( sumsq2-Math.pow(sum2,2)/n));
                 console.log("den ="+den);
 
                 if(den == 0){
@@ -336,7 +342,44 @@ app.post('/process', function (req, res) {
                 }
             }
             console.log("similarity ="+similarity);
+            predb.push("/user"+id+"/similar/"+ m++ +"/id", j);
+            predb.push("/user"+id+"/similar/"+ m++ +"/value", similarity);
+
         }
+    }
+    
+    //select items
+    //find max similar person
+    var max = -1 , maxid =0;
+    for(var i=1 ; i<count;i++) {
+        if(max< predb.getData('/user'+id+'/similar/'+i+'/value')){
+            maxid = predb.getData('/user'+id+'/similar/'+i+'/id');
+            max = predb.getData('/user'+id+'/similar/'+i+'/value');
+        }
+    }
+    //andhra
+    var fooddb = new jsondb("food-items",true,false);
+    var itemno ,name , k=1;
+    for (var i = 1; i < predb.getData('/user'+maxid+'/andhra/no') ; i++){
+        itemno = predb.getData('/user'+maxid+'/andhra/'+i+'/itemname');
+        for(var j =1 ; j<10 ;j++){
+            if(itemno == 'item'+j ){
+                name = fooddb.getData('/andhra/item'+j);
+                break;
+            }
+        }
+        predb.push('/user'+id+'/display/item'+ k++ , name);
+    }
+    //tamilnadu
+    for (var i = 1; i < predb.getData('/user'+maxid+'/tamilnadu/no') ; i++){
+        itemno = predb.getData('/user'+maxid+'/tamilnadu/'+i+'/itemname');
+        for(var j =1 ; j<10 ;j++){
+            if(itemno == 'item'+j ){
+                name = fooddb.getData('/tamilnadu/item'+j);
+                break;
+            }
+        }
+        predb.push('/user'+id+'/display/item'+ k++ , name);
     }
     
 

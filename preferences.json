@@ -1,1 +1,246 @@
-{"user1":{"name":"arvind","andhra":{"1":{"itemname":"item1","rating":"3"},"2":{"itemname":"item5","rating":"5"},"no":"2"},"tamilnadu":{"1":{"itemname":"item1","rating":"2"},"2":{"itemname":"item2","rating":"3"},"3":{"itemname":"item4","rating":"4"},"4":{"itemname":"item9","rating":"5"},"no":"4"},"display":{"item1":"Archuvitta Sambar","item2":"Medhu Vada","item3":"Gonguru Mamsam"}},"user3":{"andhra":{"1":{"itemname":"item4","rating":"5"},"2":{"itemname":"item5","rating":"2"},"3":{"itemname":"item8","rating":"3"},"4":{"itemname":"item10","rating":"4"},"no":"4"},"tamilnadu":{"1":{"itemname":"item7","rating":"3"},"2":{"itemname":"item8","rating":"5"},"3":{"itemname":"item10","rating":"4"},"no":"3"}},"user2":{"andhra":{"1":{"itemname":"item2","rating":"4"},"2":{"itemname":"item5","rating":"2"},"3":{"itemname":"item9","rating":"3"},"no":"3"},"tamilnadu":{"1":{"itemname":"item2","rating":"3"},"2":{"itemname":"item4","rating":"2"},"3":{"itemname":"item5","rating":"4"},"4":{"itemname":"item9","rating":"3"},"no":"4"}},"user5":{"andhra":{"1":{"itemname":"item7","rating":"1"},"2":{"itemname":"item8","rating":"2"},"3":{"itemname":"item9","rating":"3"},"4":{"itemname":"item10","rating":"4"},"no":"4"},"tamilnadu":{"1":{"itemname":"item2","rating":"3"},"2":{"itemname":"item4","rating":"3"},"3":{"itemname":"item8","rating":"5"},"4":{"itemname":"item10","rating":"4"},"no":"4"}},"user4":{"andhra":{"1":{"itemname":"item3","rating":"2"},"2":{"itemname":"item5","rating":"4"},"3":{"itemname":"item7","rating":"4"},"4":{"itemname":"item9","rating":"2"},"no":"3"},"tamilnadu":{"1":{"itemname":"item4","rating":"3"},"2":{"itemname":"item7","rating":"5"},"3":{"itemname":"item9","rating":"1"},"no":"2"}},"user6":{"andhra":{"1":{"itemname":"item3","rating":"2"},"2":{"itemname":"item5","rating":"4"},"3":{"itemname":"item7","rating":"4"},"4":{"itemname":"item9","rating":"2"},"no":"3"},"tamilnadu":{"1":{"itemname":"item4","rating":"3"},"2":{"itemname":"item7","rating":"5"},"3":{"itemname":"item9","rating":"1"},"no":"2"}}}
+{
+  "user1": {
+    "name": "arvind",
+    "andhra": {
+      "1": {
+        "itemname": "item1",
+        "rating": "3"
+      },
+      "2": {
+        "itemname": "item5",
+        "rating": "5"
+      },
+      "no": "2"
+    },
+    "tamilnadu": {
+      "1": {
+        "itemname": "item1",
+        "rating": "2"
+      },
+      "2": {
+        "itemname": "item2",
+        "rating": "3"
+      },
+      "3": {
+        "itemname": "item4",
+        "rating": "4"
+      },
+      "4": {
+        "itemname": "item9",
+        "rating": "5"
+      },
+      "no": "4"
+    },
+    "display": {
+      "item1": "Archuvitta Sambar",
+      "item2": "Medhu Vada",
+      "item3": "Gonguru Mamsam"
+    },
+    "similar": {
+      "1":{
+        "id":2,
+        "value":-0.30151134457776363
+      },
+      "2":{
+        "id":3,
+        "value":-0.4082482904638615
+      },
+      "3": {
+        "id": 4,
+        "value":-0.04003203845127059
+      },
+      "4": {
+        "id": 5,
+        "value":-0.12500000000000047
+      },
+      "5": {
+        "id":6,
+        "value": 0.049507377148835116
+      }
+    }
+  },
+  "user3": {
+    "andhra": {
+      "1": {
+        "itemname": "item4",
+        "rating": "5"
+      },
+      "2": {
+        "itemname": "item5",
+        "rating": "2"
+      },
+      "3": {
+        "itemname": "item8",
+        "rating": "3"
+      },
+      "4": {
+        "itemname": "item10",
+        "rating": "4"
+      },
+      "no": "4"
+    },
+    "tamilnadu": {
+      "1": {
+        "itemname": "item7",
+        "rating": "3"
+      },
+      "2": {
+        "itemname": "item8",
+        "rating": "5"
+      },
+      "3": {
+        "itemname": "item10",
+        "rating": "4"
+      },
+      "no": "3"
+    }
+  },
+  "user2": {
+    "andhra": {
+      "1": {
+        "itemname": "item2",
+        "rating": "4"
+      },
+      "2": {
+        "itemname": "item5",
+        "rating": "2"
+      },
+      "3": {
+        "itemname": "item9",
+        "rating": "3"
+      },
+      "no": "3"
+    },
+    "tamilnadu": {
+      "1": {
+        "itemname": "item2",
+        "rating": "3"
+      },
+      "2": {
+        "itemname": "item4",
+        "rating": "2"
+      },
+      "3": {
+        "itemname": "item5",
+        "rating": "4"
+      },
+      "4": {
+        "itemname": "item9",
+        "rating": "3"
+      },
+      "no": "4"
+    }
+  },
+  "user5": {
+    "andhra": {
+      "1": {
+        "itemname": "item7",
+        "rating": "1"
+      },
+      "2": {
+        "itemname": "item8",
+        "rating": "2"
+      },
+      "3": {
+        "itemname": "item9",
+        "rating": "3"
+      },
+      "4": {
+        "itemname": "item10",
+        "rating": "4"
+      },
+      "no": "4"
+    },
+    "tamilnadu": {
+      "1": {
+        "itemname": "item2",
+        "rating": "3"
+      },
+      "2": {
+        "itemname": "item4",
+        "rating": "3"
+      },
+      "3": {
+        "itemname": "item8",
+        "rating": "5"
+      },
+      "4": {
+        "itemname": "item10",
+        "rating": "4"
+      },
+      "no": "4"
+    }
+  },
+  "user4": {
+    "andhra": {
+      "1": {
+        "itemname": "item3",
+        "rating": "2"
+      },
+      "2": {
+        "itemname": "item5",
+        "rating": "4"
+      },
+      "3": {
+        "itemname": "item7",
+        "rating": "4"
+      },
+      "4": {
+        "itemname": "item9",
+        "rating": "2"
+      },
+      "no": "3"
+    },
+    "tamilnadu": {
+      "1": {
+        "itemname": "item4",
+        "rating": "3"
+      },
+      "2": {
+        "itemname": "item7",
+        "rating": "5"
+      },
+      "3": {
+        "itemname": "item9",
+        "rating": "1"
+      },
+      "no": "2"
+    }
+  },
+  "user6": {
+    "andhra": {
+      "1": {
+        "itemname": "item3",
+        "rating": "2"
+      },
+      "2": {
+        "itemname": "item5",
+        "rating": "4"
+      },
+      "3": {
+        "itemname": "item7",
+        "rating": "4"
+      },
+      "4": {
+        "itemname": "item9",
+        "rating": "2"
+      },
+      "no": "3"
+    },
+    "tamilnadu": {
+      "1": {
+        "itemname": "item4",
+        "rating": "3"
+      },
+      "2": {
+        "itemname": "item7",
+        "rating": "5"
+      },
+      "3": {
+        "itemname": "item9",
+        "rating": "1"
+      },
+      "no": "2"
+    }
+  }
+}

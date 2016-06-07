@@ -69,11 +69,11 @@
         <div class="col-sm-5 well">
             <h3>Restaurant that you can visit : </h3>
             <ul class="list-group">
-                <li class="list-group-item"><%= users.rank.rank1.name %> </li>
-                <li class="list-group-item"><%= users.rank.rank2.name %> </li>
-                <li class="list-group-item"><%= users.rank.rank3.name %> </li>
-                <li class="list-group-item"><%= users.rank.rank4.name %> </li>
-                <li class="list-group-item"><%= users.rank.rank5.name %> </li>
+                <li class="list-group-item"><%= users.rank.rank1.name%> <%= users.rank.rank1.address%> </li>
+                <li class="list-group-item"><%= users.rank.rank2.name%> <%= users.rank.rank2.address%> </li>
+                <li class="list-group-item"><%= users.rank.rank3.name%> <%= users.rank.rank3.address%> </li>
+                <li class="list-group-item"><%= users.rank.rank4.name%> <%= users.rank.rank4.address%> </li>
+                <li class="list-group-item"><%= users.rank.rank5.name%> <%= users.rank.rank5.address%> </li>
             </ul>
         </div>
         <div class="col-sm-5 col-sm-offset-2 well">
@@ -87,9 +87,12 @@
     </div>
 </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
-<script type="text/javascript" src="/jquery.backstretch.min.js"></script>;
+<script type="text/javascript" src="/javascripts/jquery.backstretch.min.js"></script>
+
+<script type="text/javascript" src="/javascripts/script.js"></script>
 </body>
 
 </html>
