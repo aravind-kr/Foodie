@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen"
+          title="no title" charset="utf-8">
+    <!--<link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">-->
+    <style type="text/css">
+        .row-heading {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .preferences {
+            padding: 30px;
+        }
+
+        label {
+            /* Other styling.. */
+            text-align: right;
+            clear: both;
+            float:left;
+            margin-right:15px;
+        }
+        .inline{
+            padding: 20px;
+        }
+        .btn{
+            margin-top: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="font-size:24px; width:94%; text-align:center;">Foodie </a><!--end of navbar-brand-->
+        <form method="post" action="/logout">
+            <input type="submit" value="Log Out" class="btn btn-danger">
+        </form>
+    </div><!-- end of navbar-container -->
+</div><!-- end of navbar -->
+
+<div class="container">
+    <div class="row">
+        <form method="post" action="/andhra">
+
+            <div class="col-sm-offset-3 col-sm-6 well">
+                <h4>Andhra Foods</h4>
+                <div class="inline">
+                    <label>Andhra Style Chicken Curry : </label><input class="pull-right" style="width:50%;" type="range" min="-5" max="5" name="item1">
+                </div>
+                <div class="inline">
+                    <label>Panasa Puttu Koora</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item2">
+                </div>
+                <div class="inline">
+                    <label>Gutti Vankaya Kura</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item3">
+                </div>
+                <div class="inline">
+                    <label>Andhra Pepper Chicken</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item4">
+                </div>
+                <div class="inline">
+                    <label>Crispy Andhra Bhindi</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item5">
+                </div>
+                <div class="inline">
+                    <label>Hyderabadi Biryani</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item6">
+                </div>
+                <div class="inline">
+                    <label>Shikampuri Kebab</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item7">
+                </div>
+                <div class="inline">
+                    <label>Boorelu</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item8">
+                </div>
+                <div class="inline">
+                    <label>Gonguru Mamsam </label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item9">
+                </div>
+                <div class="inline">
+                    <label>Pesarattu</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item10">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Click me! ">
+            </div>
+        </form>
+        <form method="post" action="/tamilnadu">
+
+            <div class="col-sm-offset-3 col-sm-6 well">
+                <h4>Tamilnadu Foods</h4>
+                <div class="inline">
+                    <label>Meen Kozhambu</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item1">
+                </div>
+                <div class="inline">
+                    <label>Milagu Pongal</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item2">
+                </div>
+                <div class="inline">
+                    <label>Urlai Roast</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item3">
+                </div>
+                <div class="inline">
+                    <label>Chicken 65</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item4">
+                </div>
+                <div class="inline">
+                    <label>Chicken Chettinad</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item5">
+                </div>
+                <div class="inline">
+                    <label>Archuvitta Sambar</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item6">
+                </div>
+                <div class="inline">
+                    <label>Cabbage Poriyal</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item7">
+                </div>
+                <div class="inline">
+                    <label>Mulligatawny Soup</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item8">
+                </div>
+                <div class="inline">
+                    <label>Medhu Vada</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item9">
+                </div>
+                <div class="inline">
+                    <label>Arisi Thengai Payasam</label><input class="pull-right" style="width:50%" type="range" min="-5" max="5" name="item10">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Click me! ">
+            </div>
+
+
+        </form>
+        <form method="post" action="/process">
+            <p class="row-heading">Get Result!</p>
+            <input type="submit" class="btn btn-primary" value="Submit!">
+        </form>
+    </div>
+</div><!-- end of container-->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

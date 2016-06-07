@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen"
+          title="no title" charset="utf-8">
+
+    <style type="text/css">
+
+        .row-heading {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .preferences {
+            padding: 30px;
+        }
+        .btn{
+            margin-top: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="font-size:24px; width:94%; text-align:center;">Foodie </a><!--end of navbar-brand-->
+        <form method="post" action="/logout">
+            <input type="submit" value="Log Out" class="btn btn-danger">
+        </form></div><!-- end of navbar-container -->
+</div><!-- end of navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5 well">
+            <form action="/location" method="post">
+                <p class="row-heading">Your Location : </p>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="City" name="city"/>
+                </div>
+                <div class="pull-right">
+                    <input type="submit" class="btn btn-primary" value="submit!">
+                    <a class="btn btn-default">Cancel</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-5 col-sm-offset-2 well preferences">
+            <div class="row-heading"> Your Preferences :</div>
+            <h4>Add food items that you are interested in :</h4>
+            <form action="/preferences" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="food_preference">
+                </div>
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+
+    <div class="row well">
+        <form method="post" action="/categories">
+            <p class="row-heading">Categories of Food:</p>
+            <div class="col-sm-2">
+                <h4>Andhra</h4>
+                <img src="/images/images.jpg" height="100px" width="100%">
+                <input type="checkbox" name="andhra"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>Bengali</h4>
+                <img src="/images/bengali.jpg" height="100px" width="100%">
+                <input type="checkbox" name="bengali"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>Goan</h4>
+                <img src="/images/goa.jpg" height="100px" width="100%">
+                <input type="checkbox" name="goa"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>gujarati</h4>
+                <img src="/images/gujarati.jpg" height="100px" width="100%">
+                <input type="checkbox" name="gujarati"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>himalayan</h4>
+                <img src="/images/himalayan.jpg" height="100px" width="100%">
+                <input type="checkbox" name="himalayan"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>karnataka</h4>
+                <img src="/images/karnataka.jpeg" height="100px" width="100%">
+                <input type="checkbox" name="karnataka"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>Pune</h4>
+                <img src="/images/pune.jpg" height="100px" width="100%">
+                <input type="checkbox" name="pune"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>punjabi</h4>
+                <img src="/images/punjabi.jpg" height="100px" width="100%">
+                <input type="checkbox" name="punjabi"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>kerala</h4>
+                <img src="/images/Puttukadala.jpg" height="100px" width="100%">
+                <input type="checkbox" name="kerala"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>rajasthani</h4>
+                <img src="/images/rajasthani.jpg" height="100px" width="100%">
+                <input type="checkbox" name="rajesthani"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>Tamilnadu</h4>
+                <img src="/images/tamilnadu.jpg" height="100px" width="100%">
+                <input type="checkbox" name="tamilnadu"><label>Select</label>
+            </div>
+            <div class="col-sm-2">
+                <h4>thepla</h4>
+                <img src="/images/Thepla.jpg" height="100px" width="100%">
+                <input type="checkbox" name="thepla"><label>Select</label>
+            </div>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+</div><!-- end of container-->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

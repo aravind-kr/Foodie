@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen"
+          title="no title" charset="utf-8">
+    <!--<link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">-->
+    <style type="text/css">
+        .row-heading {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .preferences {
+            padding: 30px;
+        }
+
+        label {
+            /* Other styling.. */
+            text-align: right;
+            clear: both;
+            float:left;
+            margin-right:15px;
+        }
+        .inline{
+            padding: 20px;
+        }
+        .btn{
+            margin-top: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="font-size:24px; width:94%; text-align:center;">Foodie </a><!--end of navbar-brand-->
+        <form method="post" action="/logout">
+            <input type="submit" value="Log Out" class="btn btn-danger">
+        </form>
+    </div><!-- end of navbar-container -->
+</div><!-- end of navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 well">
+            <p class="row-heading">Food for you : </p>
+            <ul class="list-group">
+                <li class="list-group-item">Hyderabadi Biryani</li>
+                <li class="list-group-item">Medhu Vada </li>
+                <li class="list-group-item">Gonguru Mamsam </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 well">
+            <h3>Restaurant that you can visit : </h3>
+            <ul class="list-group">
+                <li class="list-group-item"><%= users.rank.rank1.name %> </li>
+                <li class="list-group-item"><%= users.rank.rank2.name %> </li>
+                <li class="list-group-item"><%= users.rank.rank3.name %> </li>
+                <li class="list-group-item"><%= users.rank.rank4.name %> </li>
+                <li class="list-group-item"><%= users.rank.rank5.name %> </li>
+            </ul>
+        </div>
+        <div class="col-sm-5 col-sm-offset-2 well">
+            <form method="post" action="/rate">
+                <h3>Rate the restaurant : </h3>
+                <input style="margin-bottom:10px;" type="text" name="name" placeholder="Restaurant name"><br>
+                <input style="margin-bottom:10px;" type="number" name="rating" placeholder="Rate (0-5) "><br>
+                <input type="submit" value="Submit" class="btn btn-info">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

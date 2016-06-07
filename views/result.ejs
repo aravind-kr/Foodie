@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen"
+          title="no title" charset="utf-8">
+    <!--<link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">-->
+    <style type="text/css">
+        .row-heading {
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+        label {
+            /* Other styling.. */
+            text-align: right;
+            clear: both;
+            float:left;
+            margin-right:15px;
+        }
+        .btn{
+            margin-top: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="font-size:24px; width:94%; text-align:center;">Foodie </a><!--end of navbar-brand-->
+        <form method="post" action="/logout">
+            <input type="submit" value="Log Out" class="btn btn-danger">
+        </form>
+    </div><!-- end of navbar-container -->
+</div><!-- end of navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 well">
+            <p class="row-heading">Food for you : </p>
+            <ul class="list-group">
+                <li class="list-group-item">Hyderabad briyani</li>
+                <li class="list-group-item">Medhu Vada</li>
+                <li class="list-group-item">Gonguru Mamsam</li>
+            </ul>
+
+            <form action="/msg" method="post">
+                <h3>Get Direction and Choices on restaurants : </h3>
+                <input type="submit" class="btn btn-primary" value="Click me! ">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

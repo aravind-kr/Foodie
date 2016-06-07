@@ -1,0 +1,27 @@
+{
+  "table_name" : "food-items",
+  "andhra" : {
+    "item1" : "Andhra Style Chicken Curry",
+    "item2" : "Panasa Puttu Koora",
+    "item3" : "Gutti Vankaya Kura",
+    "item4" : "Andhra Pepper Chicken",
+    "item5" : "Crispy Andhra Bhindi",
+    "item6" : "Hyderabadi Biryani",
+    "item7" : "Shikampuri Kebab",
+    "item8" : "Boorelu",
+    "item9" : "Gonguru Mamsam ",
+    "item10" : "Pesarattu"
+  },
+  "tamilnadu" : {
+    "item1" : "Meen Kozhambu",
+    "item2" : "Milagu Pongal",
+    "item3" : "Urlai Roast",
+    "item4" : "Chicken 65",
+    "item5" : "Chicken Chettinad",
+    "item6" : "Archuvitta Sambar",
+    "item7" : "Cabbage Poriyal",
+    "item8" : "Mulligatawny Soup",
+    "item9" : "Medhu Vada",
+    "item10" : "Arisi Thengai Payasam"
+  }
+}
